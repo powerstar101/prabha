@@ -1,0 +1,19 @@
+
+yum install java-1.8*
+2. Confirm java version
+
+java -version
+3. Install Jenkins:
+
+yum -y install wget
+wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+yum -y install jenkins
+4. Start and enable jenkins:
+
+# Start jenkins service
+systemctl start jenkins
+
+# Setup Jenkins to start at boot,
+systemctl enable jenkins
+
